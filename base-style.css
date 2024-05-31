@@ -1,0 +1,63 @@
+body{
+    background-color: black;
+    font-family: sans-serif;
+    color: white;
+    width: 80%;
+    margin: 0px auto;
+}
+h1{
+    text-align: center;
+}
+.red-box{
+    border: 2px solid #cf2828;
+    background-color: #f36464;
+    border-radius: 15px;
+    width: 100%;
+}
+.red-box p{
+    margin: 0.5em;
+}
+.emph{
+    font-style: italic;
+}
+.small{
+    font-size: 80%;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+tr{
+    line-height: 25px;
+    border-bottom: 1px solid white;
+}
+
+th{
+    color: #902190;
+}
+
+
+/* Flexbox fun */
+.flexbox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.flex-item{
+    border-radius: 10px;
+    width: 7em;
+    height: 5em;
+    margin: 0.5em;
+    position: relative;
+    border: 1px solid white;
+    background-color: grey;
+}
+
+.flex-item h3{
+    position: absolute;
+    text-align:center;
+    vertical-align: middle;;
+}

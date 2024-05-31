@@ -1,0 +1,247 @@
+html{
+    --pureBlue: #019EE2;
+    --purePurple: #902190;
+    --backColor: #000000;
+    background-color: var(--backColor);
+    color: white;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+
+}
+body{
+  margin-top: 3em;
+  width: 80%;
+  margin: auto;
+}
+
+.logo-img{
+    max-width:40%;
+    height: auto;
+    vertical-align: auto;
+}
+
+.header{
+    margin-top: 1em;
+    margin-bottom: 3em;
+    height: 10em;;
+    width: 100%;
+
+}
+
+.words{
+    text-align: center;
+}
+.words p{
+    margin: 0px;
+    
+}
+
+.big{
+    font-size: 300%
+}
+.medium{
+    font-size: 200%
+}
+
+.bottom-gap{
+    padding-bottom: 15px;
+}
+
+.large-bottom-gap{
+    padding-bottom:25px;
+}
+
+.footer{
+    font-size: 70%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 0px;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.left{
+  float: left;
+  width: 70%;
+  margin: 0;
+}
+.right{
+  float: right;
+  width: 30%;
+  margin: 0;
+}
+.container, iframe{
+  height: 70vh;
+}
+
+.center{
+  margin: 1em auto;
+}
+
+#calFrame{
+  width: 100%;  
+  border-width:0;
+}
+
+/* CLOCK */
+/* Adapted from https://dev.to/code_mystery/simple-analog-clock-using-html-css-javascript-2c6a */
+.clock {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 2rem;
+    /* top: 15%;    */
+  }
+  
+  .outer-clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: var(--backColor);
+    overflow: hidden;
+  }
+  
+  .outer-clock-face::after {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg)
+  }
+  
+  .outer-clock-face::before,
+  .outer-clock-face::after,
+  .outer-clock-face .marking{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: var(--pureBlue);
+    z-index: 0;
+    left: 49%;
+  }
+  
+  .outer-clock-face .marking {
+    background: var(--purePurple);
+    width: 3px;
+  }
+  
+  .outer-clock-face .marking.marking-one {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    transform: rotate(30deg)
+  }
+  
+  .outer-clock-face .marking.marking-two {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    transform: rotate(60deg)
+  }
+  
+  .outer-clock-face .marking.marking-three {
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    transform: rotate(120deg)
+  }
+  
+  .outer-clock-face .marking.marking-four {
+    -webkit-transform: rotate(150deg);
+    -moz-transform: rotate(150deg);
+    transform: rotate(150deg)
+  }
+  
+  .inner-clock-face {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: var(--backColor);
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    z-index: 1;
+  }
+  
+  .inner-clock-face::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 18px;
+    margin-left: -9px;
+    margin-top: -6px;
+    background: var(--backColor);
+    z-index: 11;
+  }
+  
+  .hand {
+    width: 50%;
+    right: 50%;
+    height: 6px;
+    background: #ffffff;
+    position: absolute;
+    top: 50%;
+    border-radius: 6px;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+
+  .second-hand, .min-hand, .hour-hand{
+    transform: rotate(90deg);
+  }
+  
+  .hand.hour-hand {
+    width: 30%;
+    z-index: 3;
+  }
+  
+  .hand.min-hand {
+    height: 3px;
+    z-index: 10;
+    width: 40%;
+  }
+  
+  .hand.second-hand {
+    background: #ee791a;
+    width: 45%;
+    height: 2px;
+  }
+
+
+/* MAKE PAGE RESPONSIVE */
+@media screen and (max-width:1300px){
+  body{
+      width:100%;
+      margin-left: 0;
+      margin-right: 0;
+  }
+  
+}
+@media screen and (max-width:700px){
+  body{
+      width:100%;
+      margin-left: 0;
+      margin-right: 0;
+  }
+  .left{
+    width: 100%;
+  }
+  .right{
+    float: left;
+    width: 100%
+  }
+  .container{
+    height: auto;
+    width: 100%;
+  }
+  #rtcrc{
+    display: none;
+  }
+  
+}

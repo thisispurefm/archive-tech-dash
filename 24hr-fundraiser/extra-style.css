@@ -1,0 +1,28 @@
+.container-box{
+    background-color: #333333;
+    border-radius: 25px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 3em;
+  }
+  
+  .container-box .medium{
+    margin-top: 0.25em;
+    margin-bottom: 0em;
+  }
+  
+  .script{
+    font-family:'Courier New', Courier, monospace
+  }
+  
+  .small{
+    font-size: 50%;
+  }
+  
+  .italic{
+    font-style: italic;
+  }
+
+  .footer{
+    font-family: 'Courier New', Courier, monospace;
+  }
